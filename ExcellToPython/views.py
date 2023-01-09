@@ -74,7 +74,13 @@ def col_c(request):
  for i in data: 
     sheet.append(i) 
  wb.save(res) 
-
+ cid = []
+ cname = []
+ cadd = []
+ cph = []
+ cemail = []
+ cdn = []
+ cdh =[]
  return res
 
 
@@ -118,7 +124,16 @@ def shop_c(request):
  for i in data: 
     sheet.append(i) 
  wb.save(res) 
-
+ shcustnid = []
+ shcustname = []
+ shcustnum = []
+ shemail = []
+ shStocknid =[]
+ shStockdesp = [] 
+ shstocktyp =[]
+ shpayid = []
+ shpaydate = []
+ shpaydesp = []
  return res
 
 def store(request):
@@ -164,6 +179,17 @@ def store_c(request):
  for i in data: 
     sheet.append(i) 
  wb.save(res) 
+ stsalesnid = []
+ stSdesp = []
+ stSamount = []
+ stsalesname =[]
+ stprodnum = []
+ stprodesp=[]
+ stprotyp=[]
+ stprodit=[]
+ stpayid=[]
+ stpaydate=[] 
+ stpaydesp=[]
 
  return res
 
@@ -201,6 +227,13 @@ def stu_c(request):
  for i in data: 
     sheet.append(i) 
  wb.save(res) 
+ studnid = []
+ studname = []
+ studadd = []
+ stuEmail=[]
+ studphnum=[]
+ studdept =[]
+ Studdob=[]
 
  return res
 
