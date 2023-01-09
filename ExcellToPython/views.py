@@ -213,7 +213,7 @@ def log(request):
         pass1 = request.POST.get('pass')
         data = User.objects.filter(username=name,password=pass1)
         if (data):
-            f = redirect('/')
+            f = redirect('/home')
             return f
         else:
               return render(request, 'login1.html')
@@ -234,7 +234,7 @@ def sign(request):
         else:
              b = User(username=name, password=pass1)
              b.save()
-             f = redirect('/login')
+             f = redirect('/')
              return f
 
 
