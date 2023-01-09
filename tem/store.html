@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORE ATTRIBUTES</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h1>SALES DETAILS:</h1>
+        <p>Sales ID: <input type="number" name="salesnid" ></p>
+        <p>Sales Type: <input type="text" name="salesname" ></p>
+        <p>Sales Description: <input type="number" name="Sdesp" ></p>
+        <p>Sales Amount: <input type="number" name="Samount" ></p>
+
+        <h1>PRODUCT DETAILS</h1>
+        <p>Product Number <input type="number" name="prodnum" ></p>
+        <p>Product Description: <input type="text" name="prodesp" ></p>
+        <p>Product Type: <input type="text" name="protyp" ></p>
+        <p>Product Items: <input type="number" name="prodit" id="prodit"></p>
+
+        <h1> PAYMENT DETAILS:</h1>
+        <p>Payment ID:<input type="number" name="payid"></p>
+        <p>Payment Date:<input type="date" name="paydate"></p>
+        <p>Payment Description: <input type="text" name="paydesp"></p>
+        <input type="submit" value="Add data">
+        <a href="{% url 'sto-c' %}">Check Out</a> 
+
+    </form>
+</body>
+</html>

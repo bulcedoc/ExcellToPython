@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT ATTRIBUTES</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h1>STUDENT DETAILS:</h1>
+        <p>Student ID: <input type="number" name="studnid" ></p>
+        <p>Student name: <input type="text" name="studname" ></p>
+        <p>Student Address: <input type="text" name="studadd"></p>
+        <p>Student DOB: <input type="date" name="Studdob" ></p>
+        <P>Student Department: <input type="text" name="studdept" id="dep"></P>
+        <p>Student Contact: <input type="tel" name="studphnum" id="snum"></p>
+        <p>Student Email: <input type="email" name="Email" id="studEmail"></p>
+        <input type="submit" value="Add data">
+        <a href="{% url 'stu-c' %}">Check Out</a>
+       
+        
+
+    </form>
+</body>
+</html>
