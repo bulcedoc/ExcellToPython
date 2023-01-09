@@ -4,26 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT ATTRIBUTES</title>
-</head>
-<body>
-    <form action="" method="post">
-        {% csrf_token %}
-        <h1>STUDENT DETAILS:</h1>
-        <p>Student ID: <input type="number" name="studnid" ></p>
-        <p>Student name: <input type="text" name="studname" ></p>
-        <p>Student Address: <input type="text" name="studadd"></p>
-        <p>Student DOB: <input type="date" name="Studdob" ></p>
-        <P>Student Department: <input type="text" name="studdept" id="dep"></P>
-        <p>Student Contact: <input type="tel" name="studphnum" id="snum"></p>
-        <p>Student Email: <input type="email" name="Email" id="studEmail"></p>
-        <div id="T11">
-        <input type="submit" value="Add data" id="E12">
-        <a href="{% url 'stu-c' %}" id="E11">Check Out</a></div>
-       
-        
-
-    </form>
+    <title> Log in</title>
     <style>
         body{
             background-color:lightyellow;
@@ -49,6 +30,10 @@
             font-size: 25px;
             
         }
+        input{
+            text-align:center;
+            padding: 5px;
+        }
         #T11{
              display: flex;
              justify-content: center;
@@ -68,9 +53,19 @@
             color: aliceblue;
             border: 2px solid black;
         }
-        input{
-            padding: 5px;
-        }
         </style>
+</head>
+<body>
+    <form action="" method="post">
+        <h3 style="color: red; text-align: center;">Incorrect Credentials</h3>
+        {% csrf_token %}
+        <h1>Log in</h1>
+        <p>User Name: <input type="email" name="name" ></p>
+        <p>Password: <input type="password" name="pass" ></p>
+        <div id="T11">
+        <input type="submit" id="E11"></div>
+        
+
+    </form>
 </body>
 </html>

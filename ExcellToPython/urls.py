@@ -29,4 +29,6 @@ urlpatterns = [
     path('sh/', shop_c, name="sh-c"),
     path('sto/', store_c, name="sto-c"),
     path('stu/', stu_c, name="stu-c"),
+    path('login/', log, name="log"),
+    path('signin/', sign, name="sign"),
 ]

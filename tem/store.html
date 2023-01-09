@@ -25,9 +25,58 @@
         <p>Payment ID:<input type="number" name="payid"></p>
         <p>Payment Date:<input type="date" name="paydate"></p>
         <p>Payment Description: <input type="text" name="paydesp"></p>
-        <input type="submit" value="Add data">
-        <a href="{% url 'sto-c' %}">Check Out</a> 
-
+        <div id="T11">
+        <input type="submit" value="Add data" id="E12">
+        <a href="{% url 'sto-c' %}" id="E11">Check Out</a> 
+    </div>
     </form>
+    <style>
+        body{
+            background-color:lightyellow;
+            margin: 50px;
+            padding-inline-start: 0%;
+            border: 30px, rgb(177, 126, 107);
+        }
+        h1{
+            text-align: center;
+        
+         
+            color:red;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style:initial;
+            font-size: 30px;
+            
+        }
+        p{
+            text-align:center;
+            color: darkviolet;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-size: 25px;
+            
+        }
+        input{
+            padding: 5px;
+        }
+        #T11{
+             display: flex;
+             justify-content: center;
+        }
+        #E11{
+            background-color: rgb(29, 203, 122);
+            padding: 14px;
+            text-decoration: none;
+            color: aliceblue;
+            border: 2px solid black;
+            margin-left: 20px;
+        }
+        #E12{
+            background-color: rgb(218, 93, 93);
+            padding: 15px;
+            text-decoration: none;
+            color: aliceblue;
+            border: 2px solid black;
+        }
+        </style>
 </body>
 </html>

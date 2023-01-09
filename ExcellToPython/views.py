@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
+from django.shortcuts import redirect
 cid = []
 cname = []
 cadd = []
@@ -38,7 +39,6 @@ Studdob=[]
 # Create your views here.
 def home(request):
     return render(request,'test.html')
-
 def col(request):
     if request.method == 'POST':
         cid.append(request.POST.get('clgnid'))
@@ -205,3 +205,37 @@ def stu_c(request):
 
 def checkout(request):
     return render(request,'form.html')
+
+def log(request):
+    from app.models import User
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        pass1 = request.POST.get('pass')
+        data = User.objects.filter(username=name,password=pass1)
+        if (data):
+            f = redirect('/')
+            return f
+        else:
+              return render(request, 'login1.html')
+    return render(request, 'login.html')
+
+def sign(request):
+    from app.models import User
+    if request.method == 'POST':
+        name = request.POST.get('username')
+        pass1 = request.POST.get('createpass')
+        pass2 = request.POST.get('verifiedpass')
+        data = User.objects.filter(username=name)
+        if (pass1!=pass2):
+            return render(request, 'sign1.html')
+        elif(data):
+            print(data)
+            return render(request, 'sign1.html')
+        else:
+             b = User(username=name, password=pass1)
+             b.save()
+             f = redirect('/login')
+             return f
+
+
+    return render(request, 'sign.html')
